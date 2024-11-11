@@ -1,0 +1,44 @@
+* body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.data_table {
+  max-width: 100%;
+  padding: 8px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+/* CSS untuk tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* CSS untuk header tabel */
+th {
+  background-color: #e3f2fd; 
+  padding: 12px; 
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+
+/* CSS untuk sel-sel data */
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* CSS untuk baris genap */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* CSS untuk baris saat dihover */
+tr:hover {
+  background-color: #f1f1f1;
+}

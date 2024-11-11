@@ -1,0 +1,278 @@
+* body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Scorecard */
+.card {
+    transition: transform 0.3s ease; 
+}
+
+.card:hover {
+    transform: scale(1.05); 
+    background-color: #e3f2fd; 
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+
+#downloadMachine , #downloadCategories {
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border-radius: 5px; /* Border radius untuk membuat sudut membulat */
+  background-color: #007bff; /* Warna background tombol */
+  color: white; /* Warna teks tombol */
+  border: none; /* Menghilangkan border default */
+  cursor: pointer; /* Menambahkan cursor pointer saat hover */ 
+}
+
+#downloadMachine:hover , #downloadCategories:hover {
+  background-color: #0056b3; /* Warna background saat hover */
+}
+
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+    transform-origin: 50% 0%;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 50% 0%;
+  }
+}
+
+#myChart2,
+#myChart3,
+#myChart4,
+#myChart5,
+#myChart6,
+#myChart7 {
+  animation: scaleIn 5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* CSS untuk tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* CSS untuk header tabel */
+th {
+  background-color: #f2f2f2;
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* CSS untuk sel-sel data */
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* CSS untuk baris genap */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* CSS untuk baris saat dihover */
+tr:hover {
+  background-color: #ddd;
+}
+
+canvas {
+  margin-top: 20px;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.scorecards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 0 0 18%; /* Atur lebar card agar 5 card muat dalam satu baris */
+  margin-bottom: 20px; /* Jarak antara card */
+}
+
+@media (max-width: 1200px) {
+  .card {
+    flex: 0 0 22%; /* Sesuaikan lebar card untuk layar yang lebih kecil */
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    flex: 0 0 30%; /* Sesuaikan lebar card untuk layar yang lebih kecil */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 45%; /* Sesuaikan lebar card untuk layar yang lebih kecil */
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    flex: 0 0 100%; /* Sesuaikan lebar card untuk layar yang sangat kecil */
+  }
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.filter-group label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+input[type="text"],
+select,
+input[type="date"],
+button {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+    * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+      }
+
+      #charts-container {
+          display: grid;
+          flex-wrap: wrap;
+          gap: 20px;
+          justify-content: center;
+          grid-template-columns: repeat(2, 1fr);
+      }
+
+      .filterMachine, .Category, .filterLocation, .filterDate {
+          border: 1px solid #ccc;
+          padding: 20px;
+          border-radius: 15px;
+          flex: 1 1 300px; 
+          max-width: 100%;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      @media (max-width: 768px) {
+        #charts-container{
+          display: grid;
+          flex-wrap: wrap;
+          gap: 20px;
+          justify-content: center;
+          grid-template-columns: repeat(1, 1fr);
+          margin-left: 10px;
+          margin-right: 10px;
+        } 
+    }
+
+/* Untuk elemen dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Untuk konten dalam dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 15px; /* Menambahkan border-radius untuk tampilan yang lebih halus */
+  padding: 8px 0; /* Menambahkan padding atas dan bawah untuk ruang */
+}
+
+/* Untuk label dalam konten dropdown */
+.dropdown-content label {
+  /* display: block; */
+  padding: 1px 8px; /* Menambahkan padding untuk kenyamanan pengguna */
+  color: #333; /* Warna teks */
+  text-decoration: none; /* Menghilangkan garis bawah */
+  cursor: pointer; /* Menambahkan pointer untuk menunjukkan bahwa ini dapat diklik */
+  font-weight: normal;
+}
+
+
+/* Untuk menampilkan dropdown saat elemen induk di-hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+button {
+  padding: 10px 20px; /* Optional: to make the button look better */
+  background-color: #007bff;  /* Optional: to set a background color */
+  color: white; /* Optional: to set the text color */
+  cursor: pointer; /* Optional: to change the cursor on hover */
+}
+
+button:hover {
+  background-color: #0056b3; /* Optional: to change the background color on hover */
+}
+
+@media (max-width: 768px) {
+  .filter-date {
+    flex-wrap: wrap;
+  }
+
+  .filter-date input[type="date"],
+  .filter-date button,
+  #downloadTanggal {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+  }
+
+  .filter-date button,
+  #downloadTanggal {
+    margin-right: 0;
+  }
+}
+
+.pieChart{
+  display: flex;
+  justify-content: center;
+}
+

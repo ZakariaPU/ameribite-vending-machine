@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"/>
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../styles/dataset.css" />
+  <link rel="stylesheet" href="../styles/footer.css" />
+  <link rel="stylesheet" href="../styles/layout.css" />
+ 
+  <!-- Dataset -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+  <title>Data | AmeriBite</title>
+  <link rel="icon" type="image/png" href="../images/logo/vending.png">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#" style="display: flex; align-items: center;">
+        <img src="../images/logo/vending.png" alt="AmeriBite Logo" height="60" style="margin-right: 10px;">
+        <span style="font-size: 1.5rem;" class="ameribite">AmeriBite</span>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+        <form class="d-flex">
+          <a class="nav-link" href="#" style="font-weight: bold;" onclick="logout()"> <i class="fas fa-sign-out-alt"></i><b>LOGOUT</b></a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dataset -->
+  <h2 class="text-center my-4"><strong>VENDING MACHINE DATASET</strong></h2>
+  <div class="container data_table">
+    <div class="table-responsive">
+      <table id="dataset" class="display table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>Device ID</th>
+            <th>Machine</th>
+            <th>Location</th>
+            <th>Product</th>
+            <th>Category</th>
+            <th>Transaction</th>
+            <th>TransDate</th>
+            <th>Type</th>
+            <th>RCoil</th>
+            <th>RPrice</th>
+            <th>TransTotal</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Deskripsi Kolom -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4"><strong>COLUMN DESCRIPTION</strong></h2>
+    <div class="table-responsive">
+        <table id="category" class="table table-bordered display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Column</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Status</b></td>
+                    <td>Represents if the machine data is successfully processed</td>
+                </tr>
+                <tr>
+                    <td><b>Device ID</b></td>
+                    <td>A unique electronic identifier (also called ePort) for vending machines. The machine is assigned a unique ePrt* device</td>
+                </tr>
+                <tr>
+                    <td><b>Machine</b></td>
+                    <td>User-friendly machine name</td>
+                </tr>
+                <tr>
+                    <td><b>Location</b></td>
+                    <td>Indicates the location of the vending machine</td>
+                </tr>
+                <tr>
+                    <td><b>Product</b></td>
+                    <td>Products sold from the machine</td>
+                </tr>
+                <tr>
+                    <td><b>Category</b></td>
+                    <td>Carbonated, Water, Non Carbonated, and Food</td>
+                </tr>
+                <tr>
+                    <td><b>Transaction</b></td>
+                    <td>Unique identifier for each transaction</td>
+                </tr>
+                <tr>
+                    <td><b>TransDate</b></td>
+                    <td>Date & time of transaction</td>
+                </tr>
+                <tr>
+                    <td><b>Type</b></td>
+                    <td>Transaction type (Cash/Credit)</td>
+                </tr>
+                <tr>
+                    <td><b>RCoil</b></td>
+                    <td>Coil # used to sell the product</td>
+                </tr>
+                <tr>
+                    <td><b>RPrice</b></td>
+                    <td>Product price</td>
+                </tr>
+                <tr>
+                    <td><b>TransTotal</b></td>
+                    <td>This is the total of all transactions that will appear on the Credit Card. A user can sell drinks for $3 and snacks for $1.5 bringing the total to $4.50</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </section>
+
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="flex-container">
+          <div class="flex-item">
+              <b><p style="margin: 0; margin-right: 20px;">Supported by:</p></b>
+              <img src="../images/logo/revou.png" alt="RevoU" style="width: 50px;">
+              <img src="../images/logo/kampus-merdeka.png" alt="Kampus Merdeka" style="width: 100px;">
+          </div>
+          <div class="flex-item">
+              <b><p style="margin: 0; margin-right: 20px;">Powered by:</p></b>
+              <img src="../images/logo/vscode.svg" alt="Visual Studio Code" style="width: 50px;">
+              <img src="../images/logo/figma.svg" alt="Figma" style="width: 50px;">
+              <img src="../images/logo/github.svg" alt="Github" style="width: 50px;">
+          </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <p class="copyright-text" style="text-align: left;">Copyright &copy; 2024 AmeriBite. All Rights Reserved. Designed by Section Medan Team 2</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+  <script src="../js/dataset.js"></script>
+  <script src="../js/login.js"></script>
+  <script src="../js/layout.js"></script>
+</body>
+</html>
